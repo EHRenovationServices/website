@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Funnel Website for Marketing Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        button[type="submit"] {
+            width: calc(100% - 22px); /* Adjusted width to consider padding and border */
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Marketing Services Website</h1>
+    </header>
+
+    <main>
+        <section id="landing-page">
+            <h2>Landing Page</h2>
+            <p>Welcome to our marketing services platform! We provide a wide range of services to help grow your business:</p>
+            <ul>
+                <li>Social Media Platform Marketing</li>
+                <li>Email Marketing</li>
+                <li>Google Ads</li>
+                <li>SEO (Search Engine Optimization)</li>
+                <li>Sales Funnels</li>
+                <li>Insights Keeping and Performance Optimization</li>
+            </ul>
+            <p>Contact us today to discuss how we can help your business succeed!</p>
+            <button onclick="showOptIn()">Sign Up Now</button>
+        </section>
+
+        <section id="opt-in" style="display: none;">
+            <h2>Opt-in Page</h2>
+            <form name="contact" onsubmit="showThankYou(); return false;">
+                <p>
+                    <label>Name <input type="text" name="name" required></label>
+                </p>
+                <p>
+                    <label>Email <input type="email" name="email" required></label>
+                </p>
+                <p>
+                    <label>Number <input type="tel" name="number" required></label>
+                </p>
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+        </section>
+
+        <section id="thank-you" style="display: none;">
+            <h2>Thank You Page</h2>
+            <p>Thank you for signing up!</p>
+        </section>
+    </main>
+
+    <script>
+        function showOptIn() {
+            document.getElementById('landing-page').style.display = 'none';
+            document.getElementById('opt-in').style.display = 'block';
+        }
+
+        function showThankYou() {
+            document.getElementById('opt-in').style.display = 'none';
+            document.getElementById('thank-you').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
